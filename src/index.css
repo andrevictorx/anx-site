@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.7s ease-in-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.7s ease-in-out;
+}
+html {
+  scroll-behavior: smooth;
+}
