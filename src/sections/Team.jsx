@@ -1,20 +1,22 @@
 export default function Team() {
+  const base = import.meta.env.BASE_URL
+
   const members = [
     {
       name: "André Victor Xavier Pires",
-      photo: "/team/andre.jpg",
+      photo: `${base}team/andre.jpg`,
       description:
         "Atua há mais de 5 anos no desenvolvimento de soluções técnicas e formação profissional. Técnico em Mecânica (IFPR) e Mecatrônica (SENAI), graduando em Engenharia Elétrica (UFPR) com experiência em desenvolvimento de hardware, eletrônica aplicada e sistemas embarcados.",
     },
     {
       name: "Patrick Henrique de Souza Pereira",
-      photo: "/team/patrick.jpg",
+      photo: `${base}team/patrick.jpg`,
       description:
         "Treinador e avaliador WorldSkills em Sistemas Robóticos Integrados em nível nacional. Instrutor na formação profissional em Ciber Sistemas e Manufatura Avançada. Técnico em Mecatrônica e Mecânica Automotiva pelo SENAI, graduando em Engenharia Elétrica (UFPR).",
     },
     {
       name: "Lucas Trinoski",
-      photo: "/team/lucas.jpg",
+      photo: `${base}team/lucas.jpg`,
       description:
         "Instrutor técnico no SENAI desde 2018, treinador e avaliador WorldSkills, com forte experiência em padronização de provas, treinamento técnico e alto desempenho. Técnico em Mecatrônica e Informática, competidor WorldSkills 2017 na modalidade Mecatrônica.",
     },
@@ -31,7 +33,7 @@ export default function Team() {
       "
     >
       <div className="max-w-7xl mx-auto px-6">
-        
+
         {/* Cabeçalho */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-4xl font-bold mb-4">
@@ -65,6 +67,7 @@ export default function Team() {
                   src={member.photo}
                   alt={member.name}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
 
@@ -81,6 +84,7 @@ export default function Team() {
             </div>
           ))}
         </div>
+
       </div>
     </section>
   )

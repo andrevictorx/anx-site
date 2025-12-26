@@ -7,12 +7,13 @@ export default function Hero() {
       {/* VIDEO BACKGROUND */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
-        src="/hero-bg.mp4"
+        src={`${import.meta.env.BASE_URL}hero-bg.mp4`}
         autoPlay
         muted
         loop
         playsInline
       />
+
 
       {/* OVERLAY AZUL (legibilidade) */}
       <div
@@ -37,8 +38,8 @@ export default function Hero() {
 
 
           <p className="text-lg mb-8 text-blue-100">
-            Instrutores SENAI, especialistas Bosch e treinadores WorldSkills,
-            levando padrão internacional para a indústria e educação técnica.
+            Instrutores com experiência prática, ex-competidores e treinadores WorldSkills,
+            levando qualidade para a indústria e educação técnica.
           </p>
 
           <div className="flex gap-4">
